@@ -28,11 +28,11 @@ pipeline {
             steps {
                 echo "Deploying"
                 deploy adapters: [tomcat9 (
-                    credentialsId: 'tomcat',
+                    credentialsId: 'tomcat_id',
                     path: '',
-                    url: 'http://74.249.99.250:8088/'
+                    url: 'http://104.211.59.44:8088/'
                 )],
-                contextPath: 'finalTest',
+                contextPath: 'assessment2',
                 onFailure: 'false',
                 war: '**/*.war'
             }
